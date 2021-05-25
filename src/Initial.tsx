@@ -1,9 +1,15 @@
 import React, {FunctionComponent} from 'react';
+import {Button, Text} from "native-base";
+import {Page} from "../App";
 
-export const Menu: FunctionComponent = () => {
+export const Initial: FunctionComponent<{
+    onPageChange: (page: Page) => void
+}> = (props) => {
     return (
         <>
-          Menu
+            <Button onPress={() => props.onPageChange("register")}>
+                <Text>Register new pub.</Text>
+            </Button>
         </>
     );
 };
